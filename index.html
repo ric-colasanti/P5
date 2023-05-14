@@ -1,1 +1,52 @@
-<h3>P5 progects </h3>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+        <a class="navbar-brand" href="">P5</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="container" style="margin-top: 80px;">
+        <h3>P5</h3>
+        <div id='p5Container'></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/graphology@0.25.1/dist/graphology.umd.min.js"></script>
+    <script>
+
+
+        var boop 
+        const graph = new graphology.Graph();
+
+        function setup() {
+            let myCanvas = createCanvas(600, 400);
+            boop = random(255);
+            myCanvas.parent('p5Container');
+        }
+        function draw() {
+            // console.log(mouseX, mouseY,);
+            background(220);
+            if (mouseIsPressed) {
+                fill(boop);
+            } else {
+                fill(180);
+            }
+            ellipse(mouseX, mouseY, 80, 80);
+        }
+
+    </script>
+</body>
+
+</html>
