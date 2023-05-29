@@ -64,9 +64,11 @@
             while(notFound){
                 let r1 = random()
                 let r2 = random()
-                if(r1 < r2){
-                    print(1-(r1*2))
-                    return 1-(r1*2)
+                if(r2 < r1){
+                    if (random()<=0.5){
+                        return -r1    
+                    }
+                    return r1
                 }
             }
         }
@@ -77,8 +79,8 @@
         }
 
         Walker.prototype.step = function(){
-            this.x = 300+(montyCarlo()*100);
-            this.y = 250+(montyCarlo()*100);
+            this.x+= montyCarlo()*10;
+            this.y+= montyCarlo()*10;
         }
 
         Walker.prototype.display = function(){
